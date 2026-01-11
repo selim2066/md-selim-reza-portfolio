@@ -18,7 +18,7 @@ Welcome to my **portfolio website**! This site showcases my skills, experience, 
 ## Live Preview
 
 Check out the live preview of the portfolio website here:  
-[**Live Demo**](https://codervai.vercel.app/)
+[**Live Demo**](https://mdselimreza.netlify.app/)
 ---
 ### 🎯 Project Structure
 ```bash
