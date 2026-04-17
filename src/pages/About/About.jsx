@@ -21,50 +21,92 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative space-y-4">
-              <p className="text-white">
-                Hello! I'm Md Selim Reza — a passionate and creative Frontend
-                Developer who loves building interactive and user-friendly web
-                applications using React.
-              </p>
-              <p className="text-white">
-                While my journey began in frontend development, I'm now actively
-                learning backend technologies like Node.js and MongoDB. My goal
-                is to become a complete Full-Stack Developer, capable of
-                building entire web applications from scratch. I truly believe
-                that in the world of tech, learning never stops. That's why I
-                constantly explore, experiment, and push myself to grow and
-                adapt—ready to take on the challenges of tomorrow.
-              </p>
+          <div className="relative space-y-4">
 
-              {/* <div className="pt-6">
-                <blockquote className="border-l-4 border-gray-300 pl-4">
-                  <p className="text-white">
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
-                  </p>
+  {/* Animated gradient text for the headline phrase */}
+  <style>{`
+    @keyframes shimmer {
+      0% { background-position: 200% center }
+      100% { background-position: -200% center }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px) }
+      to   { opacity: 1; transform: translateY(0) }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(29,158,117,0) }
+      50%       { box-shadow: 0 0 20px 4px rgba(29,158,117,0.3) }
+    }
+    .glow-text {
+      background: linear-gradient(90deg, #5DCAA5, #7F77DD, #378ADD, #5DCAA5);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid;
+      margin: 2px 2px 2px 0;
+      font-family: monospace;
+    }
+    .about-card {
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border: 1px solid;
+      transition: transform 0.2s;
+      animation: fadeUp 0.5s ease both;
+    }
+    .about-card:hover { transform: translateY(-2px); }
+  `}</style>
 
-                  <div className="mt-6 space-y-3">
-                    <cite className="block font-medium text-white">
-                      Nazmul Hossain, Creator of
-                    </cite>
-                    <div className="flex items-center gap-2">
-                      <img
-                        className="h-5 w-fit"
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span className="text-white">OlovaJS</span>
-                    </div>
-                  </div>
-                </blockquote>
-              </div> */}
-            </div>
+  <p className="text-white text-sm leading-relaxed" style={{ animation: "fadeUp 0.4s ease both" }}>
+    I'm a{" "}
+    <span className="glow-text font-medium">full-stack developer</span>{" "}
+    with a focus on building scalable, maintainable web applications. I care
+    deeply about clean architecture, thoughtful API design, and writing code
+    that holds up in production — not just in demos.
+  </p>
+
+  <p className="text-white/60 text-sm leading-relaxed">
+    My day-to-day stack:{" "}
+    {["React","Next.js","Node.js","Express","PostgreSQL","Prisma"].map(t => (
+      <span key={t} className="chip" style={{ background:"rgba(29,158,117,0.1)", borderColor:"rgba(29,158,117,0.3)", color:"#5DCAA5" }}>{t}</span>
+    ))}
+    &nbsp;— currently exploring:{" "}
+    {["Redis","Go","Docker"].map(t => (
+      <span key={t} className="chip" style={{ background:"rgba(186,117,23,0.1)", borderColor:"rgba(186,117,23,0.3)", color:"#EF9F27" }}>{t}</span>
+    ))}
+  </p>
+
+  <div className="grid grid-cols-2 gap-3 pt-1">
+    {[
+      { label:"Focus",        value:"Scalable & maintainable web apps",   color:"#1D9E75", bg:"rgba(29,158,117,0.08)",  border:"rgba(29,158,117,0.25)",  glow:"rgba(29,158,117,0.3)",  delay:"0.1s" },
+      { label:"Strength",     value:"Clean architecture & API design",     color:"#7F77DD", bg:"rgba(127,119,221,0.08)", border:"rgba(127,119,221,0.25)", glow:"rgba(127,119,221,0.3)", delay:"0.2s" },
+      { label:"Learning now", value:"Redis, Go & Docker",                  color:"#378ADD", bg:"rgba(55,138,221,0.08)",  border:"rgba(55,138,221,0.25)",  glow:"rgba(55,138,221,0.3)",  delay:"0.3s" },
+      { label:"Goal",         value:"Production-ready backend systems",    color:"#BA7517", bg:"rgba(186,117,23,0.08)",  border:"rgba(186,117,23,0.25)",  glow:"rgba(186,117,23,0.3)",  delay:"0.4s" },
+    ].map(({ label, value, color, bg, border, glow, delay }) => (
+      <div
+        key={label}
+        className="about-card"
+        style={{ background: bg, borderColor: border, animationDelay: delay,
+          animation: `fadeUp 0.5s ease ${delay} both, pulseGlow 3s ease-in-out infinite` }}
+      >
+        <div>
+          <p style={{ fontSize:11, fontWeight:500, letterSpacing:"0.06em", textTransform:"uppercase", color, margin:"0 0 4px" }}>{label}</p>
+          <p style={{ fontSize:13, color:"#fff", margin:0, lineHeight:1.5 }}>{value}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
           </div>
         </div>
       </section>

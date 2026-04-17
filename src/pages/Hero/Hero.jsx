@@ -1,44 +1,16 @@
-import React, { useState, useEffect } from "react";
+import "@/assets/css/tomorrow.css";
+import { FlipWords } from "@/components/ui/flip-words";
+import Meteors from "@/components/ui/meteors";
+import SparklesText from "@/components/ui/sparkles-text";
+import PortfolioPage from "@/pages/About/About";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
-import "@/assets/css/tomorrow.css";
-import Meteors from "@/components/ui/meteors";
-import PortfolioPage from "@/pages/About/About";
-import SparklesText from "@/components/ui/sparkles-text";
-import { FlipWords } from "@/components/ui/flip-words";
+import { useEffect, useState } from "react";
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
   return (
-    //     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-    //       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]">
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           width="100%"
-    //           height="100%"
-    //           className="absolute inset-0"
-    //         >
-    //           <pattern
-    //             id="grid"
-    //             width="40"
-    //             height="40"
-    //             patternUnits="userSpaceOnUse"
-    //           >
-    //             <rect
-    //               width="40"
-    //               height="40"
-    //               fill="none"
-    //               stroke="white"
-    //               strokeWidth="0.5"
-    //               className="opacity-40 animate-gridPulse"
-    //             />
-    //           </pattern>
-    //           <rect width="100%" height="100%" fill="url(#grid)" />
-    //         </svg>
-    //       </div>
-    //     </div>
-    //   );
-    // };
+   
 
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]">
@@ -71,17 +43,30 @@ const GridBackground = () => {
 };
 
 export default function Hero() {
-  const words = ["Front End Developer ", "Learning MARN Stack"];
+const words = [
+  "Full-Stack Developer",
+  "React & Next.js Developer",
+  "Node.js & Express Backend Developer",
+  "Building Scalable Web Applications",
+  "Designing Clean Backend Architectures",
+  "API & System Designer",
+  "Working with PostgreSQL & Prisma",
+  "CSE Graduate",
+  "Exploring Docker & DevOps",
+];
 
   const [code] = useState(`
 const profile = {
     name: 'Md Selim Reza',
-    title: 'Front end Developer | Problem Solver',
-    skills: [
-        'React', 'Express',
-        'MongoDB',
-
-    ],
+    title: 'Full-Stack Developer | Problem Solver',
+   skills: [
+  "TypeScript", "Next.js",
+  "Node.js", "Express.js", "GraphQL",
+  "PostgreSQL", "MongoDB",
+  "Prisma",
+  "Git",
+  "Docker", "AWS",
+];
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
@@ -90,8 +75,7 @@ const profile = {
         return (
             this.hardWorker &&
             this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.yearsOfExperience >= 2
+            this.skills.length >= 5 
         );
     }
 };
@@ -212,7 +196,7 @@ const profile = {
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                   <SparklesText text="Hello" />
                   <span className="relative inline-block">
-                    I'm
+                    I am
                     <span className="typing-effect gradient-text">
                       {" "}
                       Md Selim Reza
@@ -232,21 +216,30 @@ const profile = {
                   />
                 </span>
               </div>
+              
 
-              {/* Description */}
-              <div className="relative mb-8 sm:mb-12 max-w-xl">
-                <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  {/* JavaScript lover 🚀 | React Developer🔧 | Crafting frameworks
-                  and coding the future 💻✨ */}
-                  React Lover ⚛️ | Front-End Dev 🚀 | Lifelong Learner 🔁
-                </p>
-              </div>
+             {/* Description */}
+<div className="relative mb-8 sm:mb-12 max-w-xl">
+  <p className="text-base sm:text-xl leading-relaxed text-gray-300/90">
+    <span className="font-semibold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+      Backend-Focused Full-Stack Developer
+    </span>
+    <span className="mx-2 text-gray-500">|</span>
+    <span className="text-gray-300">
+      Crafting scalable, performant web applications
+    </span>
+    <span className="mx-2 text-gray-500">|</span>
+    <span className="text-gray-400">
+      Lifelong Learner 🚀
+    </span>
+  </p>
+</div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  // href="https://github.com/rifatjayed"
+                  
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">

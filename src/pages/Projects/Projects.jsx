@@ -6,11 +6,23 @@ import PropTypes from "prop-types";
 
 import pawstep from "../../assets/images/pawstep.png";
 import nikee from "../../assets/images/nike.png";
+import medistore from "../../assets/images/medistore.png";
 
 import foodzone from "../../assets/images/foodzone.png";
 import coffee from "../../assets/images/coffeshop.png";
 import gadget from "../../assets/images/banner gadgetking.jpg"
 const projects = [
+  {
+    title: "MediStore — OTC Medicine E-Commerce Platform ",
+    description:
+      "A full-stack medicine e-commerce web application built with Next.js 15 (App Router), featuring multi-role access, a complete order management system, and a clean, responsive UI.",
+    src: medistore,
+    // link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
+    color: "#8f89ff",
+    githubLink: "https://github.com/selim2066/MediStore-MSR-Frontend",
+    githubLinkBackend: "https://github.com/selim2066/mediStore-msr-backend",
+    liveLink: "https://medi-store-msr-frontend.vercel.app/",
+  },
   {
     title: "ShoeNest - Your Ultimate Shoe Destination ",
     description:
