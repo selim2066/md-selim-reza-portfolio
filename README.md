@@ -15,16 +15,10 @@ Welcome to my **portfolio website**! This site showcases my skills, experience, 
 
 ---
 
-## Demo
-
-![Portfolio Demo](https://i.postimg.cc/Dfr5jCQp/Screenshot-2025-01-02-120901.png)
-
----
-
 ## Live Preview
 
 Check out the live preview of the portfolio website here:  
-[**Live Demo**](https://codervai.vercel.app/)
+[**Live Demo**](https://mdselimreza.netlify.app/)
 ---
 ### 🎯 Project Structure
 ```bash
@@ -189,6 +183,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-<div align="center"> Made with ❤️ by Nazmul Hossain </div>
+<div align="center"> Made with ❤️ by Md Selim Reza </div>
 
 # md-selim-reza-portfolio
