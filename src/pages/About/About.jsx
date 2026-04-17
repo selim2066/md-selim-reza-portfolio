@@ -9,7 +9,7 @@ export default function About() {
             Developer, Learner
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24 items-center">
-            <div className="relative mb-6 sm:mb-0">
+            {/* <div className="relative mb-6 sm:mb-0">
               <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
                 <img
                   src={HeroImg}
@@ -19,7 +19,71 @@ export default function About() {
                   height={929}
                 />
               </div>
-            </div>
+            </div> */}
+
+           {/* img wrapper */}
+      <div className="relative mb-6 sm:mb-0 group overflow-hidden rounded-2xl">
+  
+  {/* 🔥 Outer Glow */}
+  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#5DCAA5] via-[#7F77DD] to-[#378ADD] opacity-20 blur-xl group-hover:opacity-40 transition duration-500"></div>
+
+  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#04081A]">
+
+    {/* 1️⃣ Image */}
+    <img
+      src={HeroImg}
+      alt="developer portrait"
+      className="w-full h-full object-cover scale-[1.12] group-hover:scale-[1.05] transition duration-500"
+    />
+
+    {/* 2️⃣ 🔥 Strong bottom → mid gradient */}
+    <div className="absolute inset-0 z-10 pointer-events-none">
+      <div className="absolute bottom-0 left-0 right-0 h-[65%] 
+        bg-gradient-to-t 
+        from-black 
+        via-black/80 
+        via-black/40 
+        to-transparent">
+      </div>
+    </div>
+
+    {/* 3️⃣ Animated text (RIGHT → LEFT) */}
+    <div className="absolute bottom-16 left-0 w-full overflow-hidden z-20 
+  [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+  <p className="whitespace-nowrap text-[18px] tracking-[0.2em] font-mono text-white/60 animate-slide">
+    • BASED IN BANGLADESH • BACKEND-FOCUSED FULL-STACK DEVELOPER •
+  </p>
+</div>
+
+    {/* 4️⃣ Bottom highlight line */}
+    <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#5DCAA5] to-transparent opacity-70"></div>
+
+  </div>
+
+  {/* 5️⃣ Soft shadow under image (depth boost) */}
+  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[80%] h-16 
+    bg-black/60 blur-2xl rounded-full opacity-70">
+  </div>
+
+  {/* 🎬 Animations */}
+  <style>{`
+    @keyframes slide {
+      0%   { transform: translateX(100%) }
+      100% { transform: translateX(-100%) }
+    }
+
+    .animate-slide {
+      display: inline-block;
+      animation: slide 12s linear infinite;
+    }
+
+    /* Pause on hover (pro UX touch) */
+    .group:hover .animate-slide {
+      animation-play-state: paused;
+    }
+  `}</style>
+</div>
+
 
           <div className="relative space-y-4">
 
